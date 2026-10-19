@@ -10,7 +10,6 @@ const Page1 = () => {
                 ADVANCEMENT THROUGH <br />
                 <em> STRATEGY </em> AND <em>DESIGN</em>
             </h2>
-            <Loader />
 
         </div>
     )
