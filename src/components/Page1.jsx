@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
-const Page1 = ({onLoaderComplete}) => {
+const Page1 = () => {
     const chevronRef = useRef()
     useGSAP(() => {
         const tl = gsap.timeline()
