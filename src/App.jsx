@@ -12,7 +12,7 @@ const App = () => {
     }
   }, []);
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-black">
       <Header />
       <Page1 />
       <Page2 />

@@ -3,9 +3,10 @@ import { useGSAP } from '@gsap/react';
 import loaderVideo from '../assets/vid.mp4'
 import { gsap } from 'gsap';
 import { ChevronDown } from 'lucide-react';
+import { useRef } from 'react';
 
 const Page1 = () => {
-    
+    const chevronRef = useRef()
     useGSAP(() => {
         const tl = gsap.timeline()
         tl.to('#yellow', {
@@ -26,14 +27,19 @@ const Page1 = () => {
         tl.to('#loader', {
             display: 'none'
         })
-        gsap.from('footer', {
+        gsap.from('footer span', {
             opacity: 0,
             delay: 2,
             duration: 0.5
         })
+        gsap.from(chevronRef.current, {
+            y: -30,
+            opacity: 0,
+            delay: 2
+        })
     })
     return (
-            <div id="page1" className="relative h-screen bg-(--yellow) text-[6.7vw]/[0.75] font-[fright] flex items-center justify-center">
+            <div id="page1" className="relative h-screen bg-(--yellow) text-[6.7vw]/[0.75] font-[fright] flex items-center justify-center" data-scroll data-scroll-speed='-0.1'>
                 <h2 className='text-center'>
                     CREATIVE PROFESSIONALS <br />
                     <em> DEDICATED </em> TO CULTURAL <br />
@@ -42,7 +48,7 @@ const Page1 = () => {
                 </h2>
                 <footer className='absolute bottom-7 text-sm font-[helvetica] grid grid-cols-3 w-full px-15 items-center'>
                     <span className='justify-self-start'>CONTACT</span>
-                    <ChevronDown strokeWidth={1} className='justify-self-center size-10 scale-x-150'/>
+                    <ChevronDown ref={chevronRef} strokeWidth={1} className='justify-self-center size-10 scale-x-150'/>
                     <span className='justify-self-end'>INSTAGRAM</span>
                 </footer>
                 <div id='loader' className='z-2 h-screen w-full absolute left-0 top-0 text-[6.7vw]/[0.75] font-[fright] flex items-center justify-center'>
