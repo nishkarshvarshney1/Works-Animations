@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: fright;
+  src: url(./assets//fonts/FreightBigProLight-Regular.woff2);
+}
+
+:root {
+  --yellow: #F5E71C;
+}
