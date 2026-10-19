@@ -2,10 +2,12 @@
 import { useGSAP } from '@gsap/react';
 import loaderVideo from '../assets/vid.mp4'
 import { gsap } from 'gsap';
+import { ChevronDown } from 'lucide-react';
 
 const Page1 = () => {
-    const tl = gsap.timeline()
+    
     useGSAP(() => {
+        const tl = gsap.timeline()
         tl.to('#yellow', {
             y: '-100%',
             duration: 1,
@@ -24,9 +26,13 @@ const Page1 = () => {
         tl.to('#loader', {
             display: 'none'
         })
+        gsap.from('footer', {
+            opacity: 0,
+            delay: 2,
+            duration: 0.5
+        })
     })
     return (
-        <div className='relative h-screen'>
             <div id="page1" className="relative h-screen bg-(--yellow) text-[6.7vw]/[0.75] font-[fright] flex items-center justify-center">
                 <h2 className='text-center'>
                     CREATIVE PROFESSIONALS <br />
@@ -34,6 +40,11 @@ const Page1 = () => {
                     ADVANCEMENT THROUGH <br />
                     <em> STRATEGY </em> AND <em>DESIGN</em>
                 </h2>
+                <footer className='absolute bottom-7 text-sm font-[helvetica] grid grid-cols-3 w-full px-15 items-center'>
+                    <span className='justify-self-start'>CONTACT</span>
+                    <ChevronDown strokeWidth={1} className='justify-self-center size-10 scale-x-150'/>
+                    <span className='justify-self-end'>INSTAGRAM</span>
+                </footer>
                 <div id='loader' className='z-2 h-screen w-full absolute left-0 top-0 text-[6.7vw]/[0.75] font-[fright] flex items-center justify-center'>
                     <div id="yellow" className='size-full bg-(--yellow) absolute z-4'></div>
                     <video autoPlay muted loop src={loaderVideo} className='size-full absolute top-0 left-0 z-3 object-cover' />
@@ -45,7 +56,6 @@ const Page1 = () => {
                     </h2>
                 </div>
             </div>
-        </div>
     )
 }
 
