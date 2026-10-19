@@ -3,9 +3,9 @@ import { useGSAP } from '@gsap/react';
 import loaderVideo from '../assets/vid.mp4'
 import { gsap } from 'gsap';
 import { ChevronDown } from 'lucide-react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
-const Page1 = () => {
+const Page1 = ({onLoaderComplete}) => {
     const chevronRef = useRef()
     useGSAP(() => {
         const tl = gsap.timeline()
@@ -35,7 +35,7 @@ const Page1 = () => {
         gsap.from(chevronRef.current, {
             y: -30,
             opacity: 0,
-            delay: 2
+            delay: 2,
         })
     })
     return (
