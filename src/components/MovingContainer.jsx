@@ -13,7 +13,7 @@ const MovingContainer = ({ title, setShowImage }) => {
         }}
             className='js-container relative flex items-center justify-center overflow-hidden group cursor-pointer hover:italic transition'>
             <h1 className='text-[7.7vw]/[0.75] text-white group-hover:text-black transition relative z-2 font-[fright]'>{title}</h1>
-            <div id="moving" className='bg-(--yellow) absolute top-1/2 -translate-y-1/2 whitespace-nowrap hidden group-hover:flex'>
+            <div id="moving" className='bg-(--yellow) absolute top-1/2 -translate-y-1/2 whitespace-nowrap flex scale-y-0 group-hover:scale-y-100 transition duration-200'>
                 <Moving />
                 <Moving />
                 <Moving />
