@@ -31,6 +31,11 @@ const ImageContainer2 = () => {
             text1: 'jeen huhs',
             text2: 'film identity',
             img: 'comps/comp13.png'
+        },
+        {
+            text1: 'gucci',
+            text2: 'sneaker',
+            img: 'https://images.unsplash.com/photo-1777987601471-22def6494460?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'
         }
     ]
     return (

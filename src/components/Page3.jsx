@@ -5,14 +5,14 @@ import ImageContainer3 from './ImageContainer3';
 
 const Page3 = () => {
   return (
-    <div className='bg-white px-10 py-15 grid grid-cols-3 gap-6'>
-      <div className='flex-col flex gap-6'>
+    <div className='bg-white px-10 py-15 grid grid-cols-3 gap-6' >
+      <div className='flex-col flex gap-6' data-scroll data-scroll-speed='0.2'>
         <ImageContainer />
       </div>
-      <div className='flex-col flex gap-6'>
+      <div className='flex-col flex gap-6' data-scroll>
         <ImageContainer2 />
       </div>
-      <div className='flex-col flex gap-6'>
+      <div className='flex-col flex gap-6' data-scroll data-scroll-speed='0.3'>
         <ImageContainer3 />
       </div>
     </div>
