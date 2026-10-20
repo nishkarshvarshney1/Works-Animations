@@ -1,10 +1,10 @@
 import React from 'react'
 import Moving from './Moving';
-import set1 from '../assets/images/set1.png'
-import set2 from '../assets/images/set2.png'
-import set4 from '../assets/images/set4.png'
-import set5 from '../assets/images/set5.png'
-import set6 from '../assets/images/set6.png'
+import set1 from '../assets/images/sets/set1.png'
+import set2 from '../assets/images/sets/set2.png'
+import set4 from '../assets/images/sets/set4.png'
+import set5 from '../assets/images/sets/set5.png'
+import set6 from '../assets/images/sets/set6.png'
 
 const MovingContainer = ({ title, setShowImage }) => {
     return (
