@@ -46,10 +46,16 @@ const Page1 = () => {
                     ADVANCEMENT THROUGH <br />
                     <em> STRATEGY </em> AND <em>DESIGN</em>
                 </h2>
-                <footer className='absolute bottom-7 text-sm font-[helvetica] grid grid-cols-3 w-full px-15 items-center'>
-                    <span className='justify-self-start'>CONTACT</span>
+                <footer className='absolute bottom-7 text-sm font-[helvetica] grid grid-cols-3 w-full px-15 items-center uppercase'>
+                    <span className='justify-self-start'><a href="#" className='relative py-1 group'>
+              <h3>Contact</h3>
+              <span className='js-line absolute bottom-0 w-full h-px bg-black scale-x-0 group-hover:scale-x-100 transition duration-400 origin-right group-hover:origin-left'></span>
+              </a></span>
                     <ChevronDown ref={chevronRef} strokeWidth={1} className='justify-self-center size-10 scale-x-150'/>
-                    <span className='justify-self-end'>INSTAGRAM</span>
+                    <span className='justify-self-end'><a href="#" className='relative py-1 group'>
+              <h3>Instagram</h3>
+              <span className='js-line absolute bottom-0 w-full h-px bg-black scale-x-0 group-hover:scale-x-100 transition duration-400 origin-right group-hover:origin-left'></span>
+              </a></span>
                 </footer>
                 <div id='loader' className='z-2 h-screen w-full absolute left-0 top-0 text-[6.7vw]/[0.75] font-[fright] flex items-center justify-center'>
                     <div id="yellow" className='size-full bg-(--yellow) absolute z-4'></div>
